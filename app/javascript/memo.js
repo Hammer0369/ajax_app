@@ -1,7 +1,7 @@
 function post (){
   const submit = document.getElementById("submit"); // getElementByIdメソッドで取得した投稿ボタンの要素を変数submitに格納してい
-  submit.addEventListener("click", (e) => {
-    e.preventDefault();
+  submit.addEventListener("click", (e) => { // eはイベントオブジェクトという、イベント発生時の情報を持ったオブジェクト。
+    e.preventDefault(); // 投稿ボタンのクリックを無効化している。
     const form = document.getElementById("form"); // フォームの要素を取得し、変数formに格納している。
     const formData = new FormData(form); // 新たに生成したFormDataオブジェクトを変数formDataに格納している。
     const XHR = new XMLHttpRequest(); // 新たに生成したXMLHttpRequestオブジェクトを変数XHRに格納している。
